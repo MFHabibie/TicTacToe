@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TicTacToe.Object.Board;
 
 namespace TicTacToe.Object.Space
 {
@@ -11,18 +12,39 @@ namespace TicTacToe.Object.Space
     /// </summary>
     public class _Space : MonoBehaviour
     {
-        [SerializeField]
-        private Button SpaceButton;
+        public int X { get; private set; }
+        public int Y { get; private set; }
 
         [SerializeField]
-        private TextMeshProUGUI SpaceText;
+        private int coordX;
+        [SerializeField]
+        private int coordY;
+
+        private _Board board;
+        private Button spaceButton;
+        private TextMeshProUGUI spaceText;
 
         /// <summary>
-        /// Initialize Space
+        /// Setup first time on runtime
         /// </summary>
         private void Start()
         {
-            SpaceButton.onClick.AddListener(SpaceClicked);
+            X = coordX;
+            Y = coordY;
+
+            spaceButton = GetComponent<Button>();
+            spaceButton.onClick.AddListener(SpaceClicked);
+
+            spaceText=GetComponentInChildren<TextMeshProUGUI>();
+        }
+
+        /// <summary>
+        /// Initialize space with set the board reference
+        /// </summary>
+        /// <param name="inBoard">Object represent as a Board</param>
+        public void SetupSpace(_Board inBoard)
+        {
+            board = inBoard;
         }
 
         /// <summary>
@@ -30,7 +52,8 @@ namespace TicTacToe.Object.Space
         /// </summary>
         private void SpaceClicked()
         {
-            Set("O");
+            Set(board.PlayerState());
+            board.MoveStep(this);
         }
 
         /// <summary>
@@ -38,8 +61,8 @@ namespace TicTacToe.Object.Space
         /// </summary>
         /// <param name="Value"> string for setup the text. </param>
         public void Set(string Value) { 
-            SpaceText.text = Value;
-            SpaceButton.interactable = false;
+            spaceText.text = Value;
+            spaceButton.interactable = false;
         }
 
         /// <summary>
@@ -47,7 +70,15 @@ namespace TicTacToe.Object.Space
         /// </summary>
         public string Value()
         {
-            return SpaceText.text;
+            return spaceText.text;
+        }
+
+        /// <summary>
+        /// Lock the space by disable the interactable button
+        /// </summary>
+        public void LockSpace()
+        {
+            spaceButton.interactable = false;
         }
 
         /// <summary>
@@ -55,8 +86,8 @@ namespace TicTacToe.Object.Space
         /// </summary>
         public void ResetSpace()
         {
-            SpaceText.text = "";
-            SpaceButton.interactable = true;
+            spaceText.text = "";
+            spaceButton.interactable = true;
         }
     }
 }

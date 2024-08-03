@@ -627,8 +627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 164966434}
-  SpaceText: {fileID: 1738425222}
+  coordX: 0
+  coordY: 2
 --- !u!1 &307660645
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,8 +763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 307660647}
-  SpaceText: {fileID: 150715284}
+  coordX: 1
+  coordY: 2
 --- !u!1 &362286532
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,8 +899,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 362286534}
-  SpaceText: {fileID: 131506339}
+  coordX: 0
+  coordY: 0
 --- !u!1 &382187202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,8 +1672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 806123218}
-  SpaceText: {fileID: 382187204}
+  coordX: 1
+  coordY: 0
 --- !u!1 &901669831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1819,7 @@ GameObject:
   - component: {fileID: 1015916135}
   - component: {fileID: 1015916137}
   - component: {fileID: 1015916136}
+  - component: {fileID: 1015916138}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -1885,6 +1886,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015916134}
   m_CullTransparentMesh: 1
+--- !u!114 &1015916138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015916134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00429a340b64d84dbb55c726b27ff09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaces:
+  - {fileID: 362286537}
+  - {fileID: 1910943246}
+  - {fileID: 164966437}
+  - {fileID: 806123221}
+  - {fileID: 1127588386}
+  - {fileID: 307660650}
+  - {fileID: 1052062977}
+  - {fileID: 1046780519}
+  - {fileID: 1514813794}
 --- !u!1 &1046780514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,8 +2042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 1046780516}
-  SpaceText: {fileID: 1140760794}
+  coordX: 2
+  coordY: 1
 --- !u!1 &1052062972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,8 +2178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 1052062974}
-  SpaceText: {fileID: 901669833}
+  coordX: 2
+  coordY: 0
 --- !u!1 &1127588381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,8 +2314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 1127588383}
-  SpaceText: {fileID: 1412464309}
+  coordX: 1
+  coordY: 1
 --- !u!1 &1140760792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,8 +3109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 1514813791}
-  SpaceText: {fileID: 1395334984}
+  coordX: 1
+  coordY: 2
 --- !u!1 &1603849690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,8 +3498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceButton: {fileID: 1910943243}
-  SpaceText: {fileID: 579860096}
+  coordX: 0
+  coordY: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
