@@ -3109,7 +3109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700c5a042b958a940aba7080ce222aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coordX: 1
+  coordX: 2
   coordY: 2
 --- !u!1 &1603849690
 GameObject:
